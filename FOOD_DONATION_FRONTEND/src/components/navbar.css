@@ -1,0 +1,114 @@
+/* General navbar styling */
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.Nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e1e;
+  padding: 15px 50px;
+  color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Left section styling */
+.left .main-title {
+  font-size: 26px;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+/* Right section styling */
+.right {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 50px; /* Increased spacing between nav links */
+  align-items: center; /* Align items in one line */
+}
+
+.nav-links .link,
+.link-about {
+  text-decoration: none;
+  color: white;
+  font-size: 18px; /* Increased font size for better readability */
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.yourdonation {
+  width: 120px;
+  color: white;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.nav-links .link:hover,
+.link-about:hover {
+  color: #ffcc00;
+}
+
+/* Auth button styling */
+.auth {
+  background-color: #ffcc00;
+  color: #1e1e1e;
+  border: none;
+  padding: 10px 20px; /* Increased padding */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.auth:hover {
+  background-color: #ffdb4d;
+}
+
+/* Hamburger menu for mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #1e1e1e;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

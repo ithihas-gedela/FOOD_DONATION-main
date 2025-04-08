@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 6%; /* Keeps content aligned slightly left */
+  overflow: hidden;
+}
+
+.background-image {
+  transform: scaleX(-1) scale(1.1); /* Zoom in & flip */
+  width: 110%; /* Increased width to remove white border */
+  height: 110vh; /* Increased height to fully cover */
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: -5vh; /* Adjusted to keep it centered */
+  left: -5%;
+  z-index: -1;
+  filter: brightness(50%) blur(1.2px); /* Reduced blur */
+}
+
+.main-details {
+  position: relative;
+  width: 45%;
+  text-align: left;
+}
+
+.text {
+  color: white;
+  font-size: 2.2rem; /* Increased size for better readability */
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.buttons {
+  display: flex;
+  gap: 14px;
+}
+
+.button {
+  padding: 12px 24px; /* Slightly increased button size */
+  font-size: 1rem; /* Adjusted text size */
+  font-weight: bold;
+  border-radius: 10px; /* Small increase in border rounding */
+  background-color: #ffdb4d;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: #ffc107;
+  transform: scale(1.08);
+}

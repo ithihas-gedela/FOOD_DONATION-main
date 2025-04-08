@@ -1,0 +1,97 @@
+/* Centering the form */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+/* Form Styling */
+.login-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form h1 {
+  text-align: center;
+  color: #ffcc00; /* Yellow heading */
+  margin-bottom: 1rem;
+}
+
+.login-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.login-form input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.login-form input:focus {
+  border-color: #ffcc00; /* Yellow border on focus */
+  outline: none;
+}
+
+/* Button */
+.login-form button {
+  padding: 10px;
+  background-color: #ffcc00; /* Yellow button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #e6b800; /* Darker yellow on hover */
+}
+
+/* Signup Link */
+.details {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.signup {
+  color: #ffcc00; /* Yellow signup link */
+  text-decoration: none;
+  padding-left: 0.3rem;
+  font-weight: bold;
+}
+
+.signup:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .login-form {
+    width: 90%;
+    padding: 1.5rem;
+  }
+}
+
+/* Signup Link Color */
+a.signup {
+  color: #ffcc00 !important; /* Ensuring yellow color */
+}
+
+a.signup:hover {
+  text-decoration: underline;
+}

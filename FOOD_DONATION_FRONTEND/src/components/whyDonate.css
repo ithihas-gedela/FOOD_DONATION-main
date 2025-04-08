@@ -1,0 +1,100 @@
+.why-donate-section {
+  text-align: center;
+  padding: 70px 8%;
+  background-color: #f9f9f9;
+}
+
+.why-donate-section h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+/* ✅ Ensure all cards stay in one row */
+.card-container {
+  display: flex;
+  justify-content: space-between; /* Equal spacing */
+  align-items: stretch;
+  gap: 20px; /* Space between cards */
+  overflow-x: auto; /* ✅ Prevent wrapping & enable horizontal scrolling if needed */
+  white-space: nowrap;
+  padding-bottom: 10px;
+}
+
+.donate-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 24%; /* ✅ Keep all cards in one row */
+  min-width: 270px; /* Prevent shrinking */
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  white-space: normal; /* Allow text to wrap */
+}
+
+.donate-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* ✅ Zoom & slight left-right stretch only for the first card */
+.donate-card:first-child .card-image {
+  transform-origin: center;
+}
+
+.donate-card:first-child:hover .card-image {
+  transform: scale(1.25, 1.2); /* ✅ Stretch more horizontally */
+  border-radius: 12px; /* ✅ Maintains border */
+  overflow: hidden;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+.read-more {
+  color: #ff9800;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+.read-more:hover {
+  color: #e68900;
+}
+
+/* ✅ Ensure cards stay in one row */
+@media (max-width: 1024px) {
+  .card-container {
+    overflow-x: auto; /* Allow scrolling if needed */
+  }
+
+  .donate-card {
+    flex-shrink: 0; /* Prevent shrinking */
+    width: 23%; /* Maintain row layout */
+  }
+}
